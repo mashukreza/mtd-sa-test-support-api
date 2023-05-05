@@ -16,10 +16,11 @@
 
 package uk.gov.hmrc.mtdsatestsupportapi.models.request.deleteStatefulTestData
 
+import api.models.request.RawData
 import play.api.libs.functional.syntax._
 import play.api.libs.json._
 
-case class DeleteStatefulTestDataRawData(vendorClientId: String, body: Option[JsValue])
+case class DeleteStatefulTestDataRawData(vendorClientId: String, body: Option[JsValue]) extends RawData
 
 object DeleteStatefulTestDataRawData {
   implicit val writes: Writes[DeleteStatefulTestDataRawData] = (
